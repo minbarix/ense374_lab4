@@ -1,9 +1,12 @@
+import java.util.ArrayList;
+
 public class OrderApplication{
-    public bool createOrder(Order){
+
+    public bool createOrder(Order tempOrder){
         //called from main second
     }
+
     private boolean importCatalogue(){
-        //gets called from main first
         Scanner input = new Scanner(Paths.get("ProductCatalogue.txt"));
         int maxNum = 10;
 
@@ -31,9 +34,22 @@ public class Order{
     private double price;
     private int orderID;
 
+    Order(){
+        ArrayList thisList = new ArrayList();
+    }
+
+    public void addOrderLine(int pID, int quantity){
+        //create product with passed values
+        //add to arraylist of orderLines
+        double tempPrice = (quantity * database[pID].getPrice);
+        OrderLine temp = new OrderLine(pID, quantity, tempPrice);
+        thisList.add();
+    }
+
     public Date getDateReceived(){
         return dateReceived;
     }
+
     public double calculatePrice(){
         //call getproduct
         //call getquantity
