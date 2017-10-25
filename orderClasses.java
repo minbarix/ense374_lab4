@@ -7,7 +7,12 @@ public class Order{
         return dateReceived;
     }
     public double calculatePrice(){
-
+        //call getproduct
+        //call getquantity
+        //find base price
+        //call getdiscountrating from customer
+        //calculate final price with discount
+        //return final orderprice to order application
     }
 
 
@@ -23,7 +28,7 @@ public class OrderLine{
     }
 
     public Product getProduct(){
-            //return a product
+            //call getprice from the product
     }
     public int getQuantity(){
         return quantity;
@@ -68,4 +73,12 @@ public class Customer{
     public float getDiscountRating(){
         return discountRating;
     }
+}
+
+public class CorporateCustomer{
+    private String contactName;
+}
+
+public class PersonalCustomer{
+    private int creditCardNumber;
 }
