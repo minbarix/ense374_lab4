@@ -1,0 +1,10 @@
+1 10 Apples
+2 850 iPad 4
+3 1500 Threadripper 1950X
+4 2 Bananas
+5 40 Coffee Maker
+6 5 Bow Tie
+7 20 Yoga Mat
+8 100 Cat6E Cable
+9 40 Psychology Textbook
+10 65 Drywall Sheet

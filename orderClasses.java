@@ -1,3 +1,31 @@
+public class OrderApplication{
+    public bool createOrder(Order){
+        //called from main second
+    }
+    private boolean importCatalogue(){
+        //gets called from main first
+        Scanner input = new Scanner(Paths.get("ProductCatalogue.txt"));
+        int maxNum = 10;
+
+        Product[] database = new Product[10];
+
+        for(int i = 0; i < maxNum; i++){
+           database[i] = new Product();
+           
+           int productIDNum = input.next();
+           database[i].setID(productIDNum);
+
+           double productPrice = input.next();
+           database[i].setPrice(productPrice);
+
+           String productName = input.nextLine();
+           database[i].setName(productName);
+        }
+    }
+}
+
+
+
 public class Order{
     private Date dateReceived;
     private double price;
@@ -14,9 +42,6 @@ public class Order{
         //calculate final price with discount
         //return final orderprice to order application
     }
-
-
-
 }
 
 public class OrderLine{
@@ -42,6 +67,18 @@ public class Product{
     private String name;
     private double price;
     private int productID;
+
+    public void setName(String tempName){
+        name = tempName;
+    }
+
+    public void setID(int tempID){
+        productID = tempID;
+    }
+
+    public void setPrice(double tempPrice){
+        price = tempPrice;
+    }
 
     public String getName(){
         return name;
