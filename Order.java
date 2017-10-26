@@ -1,13 +1,14 @@
 import java.util.ArrayList;
 
-
 public class Order{
     private Date dateReceived;
     private double price;
     private int orderID;
+    private Customer thisCustomer;
 
-    Order(){
-        ArrayList thisList = new ArrayList();
+    public Order(){
+        ArrayList<OrderLine> thisList = new ArrayList();
+        //take customer input
     }
 
     public void addOrderLine(Product thisProduct, int quantity){
@@ -23,13 +24,14 @@ public class Order{
 
     public double calculatePrice(){
         //call getproduct
+        double sumPrice;
         for(int i = 0; i < thisList.size(); i++){
-            OrderLine storage = new OrderLine();
-            storage = thisList.get(i);
-
+            double tempPrice = thisList.get(i).getPrice();
+            sumPrice += tempPrice;
         }
 
-
+       sumPrice *= thisCustomer.getDiscountRating();
+       return sumPrice;
 
         //call getquantity
         //find base price
