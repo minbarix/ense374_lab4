@@ -10,6 +10,10 @@ public class orderApp{
     CorporateCustomer Minbari = new CorporateCustomer("CEO", "Scott", "Regina, SK", 840, 0.85);
        Order thisOrder = new Order(Minbari);
        thisOrder.addOrderLine(Lab4.database[1], 3);
+       thisOrder.addOrderLine(Lab4.database[3], 1);
+       thisOrder.addOrderLine(Lab4.database[5], 15);
+       thisOrder.addOrderLine(Lab4.database[8], 10);
+
 
        double cost = thisOrder.calculatePrice();
        System.out.println("The total order cost is: ");
