@@ -1,14 +1,11 @@
 
 public class OrderLine{
     private int quantity;
-  //  private double price;
- //   private int produ
     private Product currProduct;
 
     public OrderLine(Product product, int inputQuantity){
         currProduct = product;
         quantity = inputQuantity;
-      //  price = (product.getPrice() * inputQuantity);
     }
 
     public Product getProduct(){
@@ -18,6 +15,6 @@ public class OrderLine{
         return quantity;
     }
     public double getPrice(){
-        return currProduct.getPrice() * quantity;
+        return currProduct.getPrice() * quantity;   //get price from product
     }
 }

@@ -6,15 +6,12 @@ public class OrderApplication{
    Product[] database = new Product[10];
 
     public boolean createOrder(Order tempOrder){
-        //called from main second
         return true;
     }
 
     public boolean importCatalogue(){
       try{  Scanner input = new Scanner(Paths.get("ProductCatalogue.txt"));
         int maxNum = 10;
-
-      //  Product[] database = new Product[10];
 
         for(int i = 0; i < maxNum; i++){
            database[i] = new Product();
