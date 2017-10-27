@@ -2,7 +2,7 @@ public class Customer{
     protected String name;
     protected String address;
     protected float creditRating;
-    protected float discountRating;
+    protected double discountRating;
 
     public float getCreditRating(){
         return creditRating;
@@ -13,7 +13,7 @@ public class Customer{
     public String getAddress(){
         return address;
     }
-    public float getDiscountRating(){
+    public double getDiscountRating(){
         return discountRating;
     }
 }

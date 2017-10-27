@@ -1,13 +1,15 @@
 import java.util.ArrayList;
 
 public class Order{
-    private Date dateReceived;
+    private String dateReceived;
     private double price;
     private int orderID;
     private Customer thisCustomer;
 
+    ArrayList<OrderLine> thisList = new ArrayList<OrderLine>();
+
     public Order(Customer inputCustomer){
-        ArrayList<OrderLine> thisList = new ArrayList();
+       // ArrayList<OrderLine> thisList = new ArrayList();
         thisCustomer = inputCustomer;
     }
 
@@ -18,13 +20,13 @@ public class Order{
         thisList.add(temp);
     }
 
-    public Date getDateReceived(){
+    public String getDateReceived(){
         return dateReceived;
     }
 
     public double calculatePrice(){
         //call getproduct
-        double sumPrice;
+        double sumPrice = 0;
         for(int i = 0; i < thisList.size(); i++){
             double tempPrice = thisList.get(i).getPrice();
             sumPrice += tempPrice;
