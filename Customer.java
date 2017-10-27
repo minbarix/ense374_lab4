@@ -1,8 +1,8 @@
 public class Customer{
-    private String name;
-    private String address;
-    private float creditRating;
-    private float discountRating;
+    protected String name;
+    protected String address;
+    protected float creditRating;
+    protected float discountRating;
 
     public float getCreditRating(){
         return creditRating;

@@ -1,3 +1,3 @@
-public class PersonalCustomer{
+public class PersonalCustomer extends Customer{
     private int creditCardNumber;
 }

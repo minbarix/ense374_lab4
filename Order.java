@@ -6,9 +6,9 @@ public class Order{
     private int orderID;
     private Customer thisCustomer;
 
-    public Order(){
+    public Order(Customer inputCustomer){
         ArrayList<OrderLine> thisList = new ArrayList();
-        //take customer input
+        thisCustomer = inputCustomer;
     }
 
     public void addOrderLine(Product thisProduct, int quantity){
