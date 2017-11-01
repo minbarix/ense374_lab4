@@ -15,6 +15,8 @@ public class orderApp{
        thisOrder.addOrderLine(Lab4.database[0], 3);
        thisOrder.addOrderLine(Lab4.database[4], 18);
 
+       thisOrder.deleteOrderLine(Lab4.database[0], 3);
+
        double cost = thisOrder.calculatePrice();
        System.out.println("The total order cost is: ");
        System.out.println(cost);
