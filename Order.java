@@ -17,15 +17,13 @@ public class Order{
         thisList.add(temp);
     }
 
-    public void deleteOrderLine(Product delProduct, int delQuantity){
-        OrderLine removeLine = new OrderLine(delProduct, delQuantity);
-        boolean ifDeleted = thisList.remove(removeLine);
-        if(ifDeleted == true){
-            System.out.println("The line was deleted!");
-        }
-        else{
-            System.out.println("No match found for deletion");
-        }
+    public void deleteOrderLine(int del){
+        thisList.remove(del);
+    }
+
+    public void modifyQuantity(int changeIndex, Product replaceProduct, int newQ){
+        OrderLine replaceLine = new OrderLine(replaceProduct, newQ);
+        thisList.set(changeIndex, replaceLine);
     }
 
     public String getDateReceived(){
