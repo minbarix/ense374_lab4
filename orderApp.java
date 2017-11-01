@@ -15,6 +15,9 @@ public class orderApp{
        thisOrder.addOrderLine(Lab4.database[0], 3);
        thisOrder.addOrderLine(Lab4.database[4], 18);
 
+       thisOrder.deleteOrderLine(3);    //delete order line 4 (index 3)
+       thisOrder.modifyQuantity(0, Lab4.database[1], 10);   // modify quantity of first line to 10 iPads
+
        double cost = thisOrder.calculatePrice();
        System.out.println("The total order cost is: ");
        System.out.println(cost);

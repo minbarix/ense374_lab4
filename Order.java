@@ -17,6 +17,15 @@ public class Order{
         thisList.add(temp);
     }
 
+    public void deleteOrderLine(int del){
+        thisList.remove(del);
+    }
+
+    public void modifyQuantity(int changeIndex, Product replaceProduct, int newQ){
+        OrderLine replaceLine = new OrderLine(replaceProduct, newQ);
+        thisList.set(changeIndex, replaceLine);
+    }
+
     public String getDateReceived(){
         return dateReceived;
     }
